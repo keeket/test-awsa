@@ -1,0 +1,88 @@
+.JobOffers {
+  position: relative;
+}
+.JobOffers > div {
+  margin-bottom: 2rem;
+}
+.JobOffers header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.JobOffers header .Actions {
+  font-size: 2rem;
+  display: inline-block;
+  width: 3rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.JobOffersItem header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.JobOffersItem header .Logo {
+  margin-right: 1rem;
+}
+.JobOffersItem header .JobPosition {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.JobFacilities {
+  margin: 1rem 0;
+}
+.JobFacilities li {
+  display: flex;
+  justify-content: space-between;
+}
+.JobFacilities li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.JobFacilities li .Content {
+}
+.JobFacilities li .Content span {
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+.JobFacilities li .Content h4 {
+  margin: 0.5rem 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.JobFacilities li .Action {
+  display: flex;
+  align-items: flex-start;
+}
+.JobFacilities li .Action .ActionButton:first-child {
+  margin-right: 0.5rem;
+}
+.JobFacilities li .Action .ActionButton {
+  padding: 5px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  color: white !important;
+  cursor: pointer;
+}
+.JobFacilities li .Action .ActionButton.ActionClose {
+  background-color: var(--color-danger);
+}
+.JobFacilities li .Action .ActionButton.ActionOk {
+  background-color: var(--secondary-color);
+}
+.JobOffersItem footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.JobOffersItem footer button:first-child {
+  margin-right: 1rem;
+}
+.JobOffersItem footer > button {
+  flex: 1;
+}

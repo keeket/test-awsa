@@ -1,0 +1,61 @@
+.JobApplied {
+  position: relative;
+}
+.JobApplied header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TopHeading {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+.Job {
+  margin-bottom: 2rem;
+}
+.Job header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Actions {
+  font-size: 2rem;
+  display: inline-block;
+  width: 3rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.Content {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.JobPosition {
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.JobCompany {
+  color: var(--primary-color);
+}
+.JobAddress {
+  opacity: 0.8;
+}
+.Job footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.JobPostAt {
+  opacity: 0.6;
+  text-transform: capitalize;
+}
+.JobStatus {
+  padding: 0.5rem;
+  text-transform: capitalize;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+}

@@ -1,0 +1,83 @@
+.User {
+  cursor: initial !important;
+  margin-left: 3rem;
+}
+.User .UserMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.User .UserMenu li .Icon {
+  font-size: 2rem;
+}
+.User .UserMenu li .Icon.Notification {
+  position: relative;
+}
+.User .UserMenu li .Icon.Notification::after {
+  position: absolute;
+  content: "\f111";
+  font-weight: 900;
+  font-family: "Font Awesome 5 free";
+  color: #ff4040;
+  font-size: 6px;
+  top: 1px;
+  right: 3px;
+}
+.User .UserMenu li.UserProfile {
+  position: relative;
+}
+.User .UserMenu li.UserProfile .AccountInfo {
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, 150%);
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--primary-box-shadow);
+  transition: 0.3s ease-out;
+  z-index: 50;
+  backface-visibility: hidden;
+  visibility: hidden;
+  opacity: 0;
+}
+.User .UserMenu li.UserProfile .AccountInfo.Active {
+  transform: translate(-50%, 115%);
+  opacity: 1;
+  visibility: visible;
+}
+.User .UserMenu li.UserProfile .AccountInfo::before {
+  content: "";
+  border-bottom: 1rem solid white;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.User .UserMenu li.UserProfile .AccountInfo li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+.User .UserMenu li.UserProfile .AccountInfo li a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: var(--secondary-color);
+  content: "";
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+.User .UserMenu li.UserProfile .AccountInfo li a:hover::before {
+  opacity: 1;
+}
+.User .UserMenu li.UserProfile .AccountInfo li a .Icon {
+  margin-right: 1rem;
+  color: var(--primary-color);
+}

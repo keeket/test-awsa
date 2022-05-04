@@ -1,0 +1,55 @@
+.Target {
+}
+.AdvancedTargeting {
+  padding: 2rem 0;
+  border-top: 2px solid rgba(221, 221, 221, 0.63);
+  border-bottom: 2px solid rgba(221, 221, 221, 0.63);
+}
+.AdvancedTargeting h3 {
+  padding-left: 1rem;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.AdvancedTargeting .Icon {
+  margin-right: 1rem;
+  color: var(--primary-color-shadow);
+}
+.Budget {
+  margin-top: 2rem;
+}
+.Target h2,
+.Budget h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 900;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.Target h2 span.ArrowIcon,
+.Budget h2 span.ArrowIcon {
+  transition: 0.3s ease-out;
+}
+.Target h2 span.ArrowIcon.Active,
+.Budget h2 span.Active {
+  transform: rotate(180deg);
+}
+.BudgetContainer,
+.TargetContainer {
+  transition: 0.4s ease-out;
+}
+.BudgetContainer.hide,
+.TargetContainer.hide {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+.BudgetContainer.show {
+  max-height: 30rem;
+  opacity: 1;
+}
+.TargetContainer.show {
+  max-height: 70rem;
+  opacity: 1;
+}

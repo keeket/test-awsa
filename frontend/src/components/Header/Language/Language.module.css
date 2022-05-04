@@ -1,0 +1,25 @@
+.Language {
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--bg-main);
+  display: none !important;
+}
+.Language img {
+  width: 3rem;
+}
+.Language .Name {
+  margin: 0 0.5rem;
+}
+.Language .Icon {
+  /* width: 3rem; */
+  /* padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; */
+}
+@media (min-width: 992px) {
+  .Language {
+    display: flex !important;
+  }
+} ;

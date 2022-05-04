@@ -1,0 +1,45 @@
+.SavedJobs {
+}
+.SavedJobs > div {
+  margin-bottom: 2rem;
+}
+.SavedJobs header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.SavedJobs header .Actions {
+  font-size: 2rem;
+  display: inline-block;
+  width: 3rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.SavedJobsItem {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.Logo {
+  margin-right: 1rem;
+}
+.JobPosition {
+  font-weight: 700;
+}
+.CloseIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  opacity: 0.6;
+}

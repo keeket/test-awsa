@@ -1,0 +1,29 @@
+.FormControl {
+  margin-bottom: 2rem;
+}
+.FormControl label {
+  font-weight: 700;
+  display: block;
+  padding-left: 1rem;
+}
+.FormControl input {
+  -moz-appearance: none;
+  border: none;
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  font-size: 1.8rem;
+  font-size: 3rem;
+}
+.FormControl input::placeholder {
+  font-size: 3rem;
+  color: rgba(68, 68, 68, 0.342);
+}
+.FormControl input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.FormControl input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}

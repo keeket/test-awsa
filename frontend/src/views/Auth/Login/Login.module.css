@@ -1,0 +1,18 @@
+.Login {
+  min-height: 100%;
+}
+.RegistrationForm {
+}
+.Login .BackLink {
+  font-size: 3rem;
+  color: var(--primary-color);
+  font-weight: 400;
+}
+.Login h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.Login form button {
+  padding: 1.5rem;
+}

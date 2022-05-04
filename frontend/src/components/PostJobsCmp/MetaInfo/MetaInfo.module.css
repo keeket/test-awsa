@@ -1,0 +1,15 @@
+.CountrySelector {
+}
+.SelectSoftSkill,
+.SelectHardSkill {
+  margin-bottom: 2rem;
+}
+.Devices {
+}
+.OsSelector,
+.Devices,
+.CountrySelector {
+  margin-bottom: 3rem;
+}
+.CountrySelector {
+}

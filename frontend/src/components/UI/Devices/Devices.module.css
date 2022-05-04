@@ -1,0 +1,38 @@
+.Devices {
+}
+.title {
+  color: var(--text-muted-color);
+}
+.DevicesContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--primary-color-shadow);
+  border-radius: var(--border-radius);
+}
+.DeviceItem {
+  font-size: 1.8rem;
+  color: var(--primary-color-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 700;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+
+.DeviceItem:hover,
+.DeviceItem.selected {
+  background-color: var(--primary-color-shadow);
+  color: white;
+}
+.DeviceItem:not(:last-child) {
+  border-right: 2px solid var(--primary-color-shadow);
+}
+.Icon {
+  margin-right: 1rem;
+}
+.DeviceName {
+}

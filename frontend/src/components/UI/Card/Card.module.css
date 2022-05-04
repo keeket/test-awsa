@@ -1,0 +1,8 @@
+.Card {
+  position: relative;
+  padding: 2rem;
+  box-shadow: var(--primary-box-shadow);
+  border-radius: var(--border-radius);
+  background-color: white;
+  box-sizing: border-box;
+}

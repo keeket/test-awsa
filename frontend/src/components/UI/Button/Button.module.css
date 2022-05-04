@@ -1,0 +1,38 @@
+.Button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+.Primary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.Primary:hover {
+  color: white;
+  background-color: #1a4932;
+}
+.Secondary {
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+.Secondary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: white;
+}
+.Button.Block {
+  width: 100%;
+}
+.Button:disabled {
+  cursor: not-allowed;
+  background-color: rgb(156, 156, 156);
+}

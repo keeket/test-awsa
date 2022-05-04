@@ -1,0 +1,61 @@
+.OnlineInterviews > div {
+  margin-bottom: 2rem;
+}
+.OnlineInterviews header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.OnlineInterviews header .Actions {
+  font-size: 2rem;
+  display: inline-block;
+  width: 3rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.InterViewItem .Content {
+  display: flex;
+  align-items: center;
+}
+.InterViewItem .Content .Avatar {
+  margin-right: 1rem;
+}
+.InterViewItem .Content .UserName {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.InterViewItem .Content .UserName .UserAddress {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+.InterViewItem .Content .UserName .UserAddress i {
+  margin-right: 0.5rem;
+}
+
+.InterViewItem footer p {
+  font-size: 1.3rem;
+}
+.InterViewItem footer .Interviewers {
+  display: flex;
+}
+.InterViewItem footer .Interviewers > div {
+  margin-left: -1.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.InterViewItem footer .ScheduleInterView {
+  padding: 1rem;
+  background-color: var(--bg-main);
+  color: var(--primary-color);
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+.InterViewItem footer .ScheduleInterView .Icon {
+  margin-right: 1rem;
+}

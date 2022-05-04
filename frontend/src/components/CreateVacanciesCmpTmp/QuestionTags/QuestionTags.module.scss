@@ -1,0 +1,34 @@
+.QuestionTags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primary-color);
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+    &:hover {
+      transform: translateY(-0.5rem) scale(1.05);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    }
+    &:active {
+      transform: translateY(-2px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    }
+    i {
+      color: var(--primary-color);
+      margin-right: 1.5rem;
+    }
+  }
+}

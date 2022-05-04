@@ -1,0 +1,42 @@
+.ScreeningQuestions {
+  display: flex;
+  margin: 5rem 0;
+  @media only screen and (max-width: 48em) {
+    flex-direction: column;
+  }
+  .screeningContainer {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px dashed var(--color-gray-dark);
+    border-radius: var(--border-radius);
+    margin-right: 2.5rem;
+    @media only screen and (max-width: 48em) {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.8rem;
+    }
+  }
+  .RecommendText {
+    flex: 0 0 40%;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-gray-dark);
+    padding: 2rem;
+    color: var(--color-gray-dark);
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.Registration {
+  min-height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.RegistrationForm {
+  flex: 1;
+}
+.RegistrationForm .BackLink {
+  font-size: 3rem;
+  color: var(--primary-color);
+  font-weight: 400;
+}
+.RegistrationForm h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.RegistrationForm form button {
+  padding: 1.5rem;
+}
+
+.RegistrationSuccess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+.RegistrationSuccess .Icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+  position: relative;
+  display: inline-block;
+}
+.RegistrationSuccess .Icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  animation: slideRight 0.5s ease-out forwards;
+}
+.RegistrationSuccess h4 {
+  /* font-size: 2.5rem; */
+  margin: 1rem 0;
+}
+@keyframes slideRight {
+  to {
+    left: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .RegistrationSuccess {
+    width: 100%;
+  }
+}

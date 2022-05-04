@@ -1,0 +1,6 @@
+.CardInside {
+  position: relative;
+  border: 2px solid #ddd;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+}

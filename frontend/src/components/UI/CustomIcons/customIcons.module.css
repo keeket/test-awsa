@@ -1,0 +1,39 @@
+.icon {
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--border-radius);
+  background-color: var(--bg-main);
+  font-size: 2rem;
+}
+/* icons color */
+.icon.facebook {
+  background-color: #0c88ef !important;
+  color: white !important;
+}
+.icon.twitter {
+  background-color: #1da1f2 !important;
+  color: white;
+}
+.icon.linkedin {
+  background-color: #0a66c2 !important;
+  color: white;
+}
+.icon.dev {
+  background-color: transparent !important;
+  font-size: 4rem;
+}
+.icon.medium {
+  background-color: transparent !important;
+  font-size: 4rem;
+}
+.icon.google {
+  background-color: transparent;
+}
+.icon.google img {
+  width: 100%;
+  background-color: transparent;
+}

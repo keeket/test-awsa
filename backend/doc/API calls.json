@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "219ea151-bd19-443d-8153-33dceeb7c64c",
+		"name": "Meritude",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@test.nl\",\r\n    \"password\": \"hihihi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				},
+				"description": "Register new user"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@test.nl\",\r\n    \"password\": \"hihihi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Successul login"
+			},
+			"response": []
+		},
+		{
+			"name": "Employer register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test2@test2.nl\",\r\n    \"password\": \"hoihoihoi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/registerEmployer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registerEmployer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login employer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test2@test2.nl\",\r\n    \"password\": \"hoihoihoi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new job",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Mjg5MzYwMjgsImV4cCI6MTYyODkzNjYyOCwic3ViIjoidGVzdDJAdGVzdDIubmwiLCJpc3MiOiJNZXJpdHVkZSIsInVzZXJpZCI6MiwidXNlcnR5cGUiOiJlbXBsb3llciJ9.Xg6Us0ahmXdCBu1GA4ngyLySTPmGDUVQs9w-zu96y4U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Enterprise Data Scientist I\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Presentation Skills\",\r\n      \"Mentoring\",\r\n      \"Client Management\",\r\n      \"Team work\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Javascript\",\r\n      \"C++\",\r\n      \"AWS\"\r\n    ],\r\n    \"qualifications\": \"BA\",\r\n    \"salary\": 3511,\r\n    \"experience\": 4,\r\n    \"country\": \"USA\",\r\n    \"city\": \"Woodland Hills\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/job",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"job"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get job",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Mjg5MzYwMjgsImV4cCI6MTYyODkzNjYyOCwic3ViIjoidGVzdDJAdGVzdDIubmwiLCJpc3MiOiJNZXJpdHVkZSIsInVzZXJpZCI6MiwidXNlcnR5cGUiOiJlbXBsb3llciJ9.Xg6Us0ahmXdCBu1GA4ngyLySTPmGDUVQs9w-zu96y4U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/job?jobId=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"job"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update job",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Mjg5MzYwMjgsImV4cCI6MTYyODkzNjYyOCwic3ViIjoidGVzdDJAdGVzdDIubmwiLCJpc3MiOiJNZXJpdHVkZSIsInVzZXJpZCI6MiwidXNlcnR5cGUiOiJlbXBsb3llciJ9.Xg6Us0ahmXdCBu1GA4ngyLySTPmGDUVQs9w-zu96y4U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Sales\",\r\n      \"Team work\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"Python\",\r\n      \"Javascript\",\r\n      \"SQL\",\r\n      \"Python\"\r\n    ],\r\n    \"qualifications\": \"MSc\",\r\n    \"salary\": 2919,\r\n    \"experience\": 1,\r\n    \"country\": \"USA\",\r\n    \"city\": \"Middletown\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/job?jobId=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"job"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete job",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Mjg5MzYwMjgsImV4cCI6MTYyODkzNjYyOCwic3ViIjoidGVzdDJAdGVzdDIubmwiLCJpc3MiOiJNZXJpdHVkZSIsInVzZXJpZCI6MiwidXNlcnR5cGUiOiJlbXBsb3llciJ9.Xg6Us0ahmXdCBu1GA4ngyLySTPmGDUVQs9w-zu96y4U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/job?jobId=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"job"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a list of jobs",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjY2MTE4MDAsImV4cCI6MTYyNjYxMjQwMCwic3ViIjoibWF0dGhpanNAaWsubmwiLCJpc3MiOiJNZXJpdHVkZSIsInVzZXJpZCI6MiwidXNlcnR5cGUiOiJlbXBsb3llciJ9.gDOgB9i-Gw8HEJjPAHu9cefQzFy6JOjz8IxLrBAdIjc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"ID\": 1,\r\n    \"title\": \"Enterprise Data Scientist I\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Presentation Skills\",\r\n      \"Mentoring\",\r\n      \"Client Management\",\r\n      \"Team work\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Javascript\",\r\n      \"C++\",\r\n      \"AWS\"\r\n    ],\r\n    \"Qualifications\": \"BA\",\r\n    \"Salary\": 3511,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Woodland Hills\"\r\n  },\r\n  {\r\n    \"ID\": 2,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Sales\",\r\n      \"Team work\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"Python\",\r\n      \"Javascript\",\r\n      \"SQL\",\r\n      \"Python\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 2919,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Middletown\"\r\n  },\r\n  {\r\n    \"ID\": 3,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Presentation Skills\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Javascript\",\r\n      \"Tensorflow\",\r\n      \"Python\",\r\n      \"Javascript\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 3028,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"New York\"\r\n  },\r\n  {\r\n    \"ID\": 4,\r\n    \"title\": \"Data Scientist, Aladdin Wealth Tech, Associate (Modeler)\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Teaching\",\r\n      \"Presentation Skills\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"AWS\",\r\n      \"AWS\",\r\n      \"SQL\",\r\n      \"AWS\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 5587,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"New York\"\r\n  },\r\n  {\r\n    \"ID\": 5,\r\n    \"title\": \"Senior Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Adaptability\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Jupyter Notebooks\",\r\n      \"AWS\",\r\n      \"AWS\",\r\n      \"Jupyter Notebooks\",\r\n      \"AWS\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 4707,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Charlotte\"\r\n  },\r\n  {\r\n    \"ID\": 6,\r\n    \"title\": \"CIB \\u00ef\\u00bf\\u00bd Fixed Income Research \\u00ef\\u00bf\\u00bd Machine Learning Data Scientist - Securitized Products \\u00ef\\u00bf\\u00bd Associate/VP\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Client Management\",\r\n      \"Adaptability\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"AWS\",\r\n      \"SQL\",\r\n      \"SQL\",\r\n      \"AWS\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"Techlabs\",\r\n    \"Salary\": 2382,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"New York\"\r\n  },\r\n  {\r\n    \"ID\": 7,\r\n    \"title\": \"Data Scientist, Licensing Operations\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Presentation Skills\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"C++\",\r\n      \"Python\",\r\n      \"Tensorflow\",\r\n      \"C++\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 5054,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"New York\"\r\n  },\r\n  {\r\n    \"ID\": 8,\r\n    \"title\": \"Sr. Data Scientist (Can work on Xoriant W2)\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Client Management\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C++\",\r\n      \"C++\",\r\n      \"SQL\",\r\n      \"C++\",\r\n      \"C++\"\r\n    ],\r\n    \"Qualifications\": \"Techlabs\",\r\n    \"Salary\": 4960,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Santa Clara\"\r\n  },\r\n  {\r\n    \"ID\": 9,\r\n    \"title\": \"Data Scientist, Aladdin Wealth Tech, Associate\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Client Management\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C++\",\r\n      \"Tensorflow\",\r\n      \"C++\",\r\n      \"C++\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"MBA\",\r\n    \"Salary\": 5017,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"New York\"\r\n  },\r\n  {\r\n    \"ID\": 10,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Teaching\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"SQL\",\r\n      \"SQL\",\r\n      \"C#\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 4658,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"San Francisco\"\r\n  },\r\n  {\r\n    \"ID\": 11,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Sales\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"SQL\",\r\n      \"C#\",\r\n      \"Tensorflow\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 2376,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Monterey\"\r\n  },\r\n  {\r\n    \"ID\": 12,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Sales\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"Jupyter Notebooks\",\r\n      \"SQL\",\r\n      \"SQL\",\r\n      \"Jupyter Notebooks\"\r\n    ],\r\n    \"Qualifications\": \"Techlabs\",\r\n    \"Salary\": 5010,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Reston\"\r\n  },\r\n  {\r\n    \"ID\": 13,\r\n    \"title\": \"ETL Developer / Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Presentation Skills\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Jupyter Notebooks\",\r\n      \"Tensorflow\",\r\n      \"SQL\",\r\n      \"Jupyter Notebooks\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 4730,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Reston\"\r\n  },\r\n  {\r\n    \"ID\": 14,\r\n    \"title\": \"Research Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Adaptability\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"Javascript\",\r\n      \"R\",\r\n      \"SQL\",\r\n      \"Javascript\"\r\n    ],\r\n    \"Qualifications\": \"Techlabs\",\r\n    \"Salary\": 3910,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Salt Lake City\"\r\n  },\r\n  {\r\n    \"ID\": 15,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Adaptability\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"Javascript\",\r\n      \"Javascript\",\r\n      \"C#\",\r\n      \"Javascript\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 5847,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Washington\"\r\n  },\r\n  {\r\n    \"ID\": 16,\r\n    \"title\": \"Senior Data Scientist :: VK (9)\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Mentoring\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C++\",\r\n      \"SQL\",\r\n      \"Javascript\",\r\n      \"C++\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 4837,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Mclean\"\r\n  },\r\n  {\r\n    \"ID\": 17,\r\n    \"title\": \"Senior Data Scientist - W2\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Presentation Skills\",\r\n      \"Presentation Skills\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"Tensorflow\",\r\n      \"R\",\r\n      \"C#\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"Techlabs\",\r\n    \"Salary\": 5908,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Boston\"\r\n  },\r\n  {\r\n    \"ID\": 18,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Mentoring\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Javascript\",\r\n      \"Python\",\r\n      \"C++\",\r\n      \"Javascript\",\r\n      \"Python\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 2759,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Mclean\"\r\n  },\r\n  {\r\n    \"ID\": 19,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Teaching\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"AWS\",\r\n      \"Tensorflow\",\r\n      \"C++\",\r\n      \"AWS\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"Techlabs\",\r\n    \"Salary\": 5727,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Seattle\"\r\n  },\r\n  {\r\n    \"ID\": 20,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Mentoring\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"AWS\",\r\n      \"Tensorflow\",\r\n      \"SQL\",\r\n      \"AWS\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 5524,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Newark\"\r\n  },\r\n  {\r\n    \"ID\": 21,\r\n    \"title\": \"Sr. Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Teaching\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"C#\",\r\n      \"C#\",\r\n      \"SQL\",\r\n      \"C#\"\r\n    ],\r\n    \"Qualifications\": \"MBA\",\r\n    \"Salary\": 5958,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Los Angeles\"\r\n  },\r\n  {\r\n    \"ID\": 22,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Mentoring\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"R\",\r\n      \"Python\",\r\n      \"SQL\",\r\n      \"R\",\r\n      \"Python\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 2180,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Santa Monica\"\r\n  },\r\n  {\r\n    \"ID\": 23,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Presentation Skills\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"Jupyter Notebooks\",\r\n      \"C++\",\r\n      \"SQL\",\r\n      \"Jupyter Notebooks\"\r\n    ],\r\n    \"Qualifications\": \"MBA\",\r\n    \"Salary\": 3025,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Cambridge\"\r\n  },\r\n  {\r\n    \"ID\": 24,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Mentoring\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Javascript\",\r\n      \"C#\",\r\n      \"Jupyter Notebooks\",\r\n      \"Javascript\",\r\n      \"C#\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 5966,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Plano\"\r\n  },\r\n  {\r\n    \"ID\": 25,\r\n    \"title\": \"Senior Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Sales\",\r\n      \"Adaptability\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"AWS\",\r\n      \"Jupyter Notebooks\",\r\n      \"C#\",\r\n      \"AWS\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 5351,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Dallas\"\r\n  },\r\n  {\r\n    \"ID\": 26,\r\n    \"title\": \"Data Scientist with Sagemaker Experience | NO OPTs please\",\r\n    \"softSkills\": [\r\n      \"Teaching\",\r\n      \"Teaching\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"C#\",\r\n      \"R\",\r\n      \"C#\",\r\n      \"C#\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 2132,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Dallas\"\r\n  },\r\n  {\r\n    \"ID\": 27,\r\n    \"title\": \"Data Scientist / Data Engineer\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Teaching\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Jupyter Notebooks\",\r\n      \"C++\",\r\n      \"AWS\",\r\n      \"Jupyter Notebooks\",\r\n      \"C++\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 4359,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Houston\"\r\n  },\r\n  {\r\n    \"ID\": 28,\r\n    \"title\": \"Data Scientist with Exp in Data Modelling\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Mentoring\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"AWS\",\r\n      \"AWS\",\r\n      \"Tensorflow\",\r\n      \"AWS\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 3219,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Bothell\"\r\n  },\r\n  {\r\n    \"ID\": 29,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Client Management\",\r\n      \"Adaptability\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"R\",\r\n      \"SQL\",\r\n      \"R\",\r\n      \"R\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 2678,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Houston\"\r\n  },\r\n  {\r\n    \"ID\": 30,\r\n    \"title\": \"Data Scientist needed with solid R and Python skills\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Adaptability\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Javascript\",\r\n      \"C++\",\r\n      \"C#\",\r\n      \"Javascript\",\r\n      \"C++\"\r\n    ],\r\n    \"Qualifications\": \"BA\",\r\n    \"Salary\": 4942,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Seattle\"\r\n  },\r\n  {\r\n    \"ID\": 31,\r\n    \"title\": \"Level I Solutions Engineer - Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Teaching\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"SQL\",\r\n      \"SQL\",\r\n      \"Tensorflow\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 3947,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Irvine\"\r\n  },\r\n  {\r\n    \"ID\": 32,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Teaching\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"AWS\",\r\n      \"C++\",\r\n      \"R\",\r\n      \"AWS\",\r\n      \"C++\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 2907,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Chantilly\"\r\n  },\r\n  {\r\n    \"ID\": 33,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Teaching\",\r\n      \"Teaching\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Python\",\r\n      \"AWS\",\r\n      \"C++\",\r\n      \"Python\",\r\n      \"AWS\"\r\n    ],\r\n    \"Qualifications\": \"MBA\",\r\n    \"Salary\": 4991,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"West Chester Township\"\r\n  },\r\n  {\r\n    \"ID\": 34,\r\n    \"title\": \"Senior Data Scientist - Tallahassee, FL - $150k-$170k\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Presentation Skills\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Javascript\",\r\n      \"Tensorflow\",\r\n      \"AWS\",\r\n      \"Javascript\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 2577,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Tallahassee\"\r\n  },\r\n  {\r\n    \"ID\": 35,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Adaptability\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Jupyter Notebooks\",\r\n      \"Jupyter Notebooks\",\r\n      \"Jupyter Notebooks\",\r\n      \"Jupyter Notebooks\",\r\n      \"Jupyter Notebooks\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 2361,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Dallas\"\r\n  },\r\n  {\r\n    \"ID\": 36,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Teaching\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C++\",\r\n      \"R\",\r\n      \"C#\",\r\n      \"C++\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 3810,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Plymouth Meeting\"\r\n  },\r\n  {\r\n    \"ID\": 37,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Client Management\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"Python\",\r\n      \"Tensorflow\",\r\n      \"SQL\",\r\n      \"Python\"\r\n    ],\r\n    \"Qualifications\": \"Techlabs\",\r\n    \"Salary\": 3082,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Alexandria\"\r\n  },\r\n  {\r\n    \"ID\": 38,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Teaching\",\r\n      \"Sales\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"R\",\r\n      \"C++\",\r\n      \"Tensorflow\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 5811,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Seattle\"\r\n  },\r\n  {\r\n    \"ID\": 39,\r\n    \"title\": \"Data Scientist Tampa, FL $110-130K\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Adaptability\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Jupyter Notebooks\",\r\n      \"R\",\r\n      \"C++\",\r\n      \"Jupyter Notebooks\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 2070,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Tampa\"\r\n  },\r\n  {\r\n    \"ID\": 40,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Presentation Skills\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"C#\",\r\n      \"SQL\",\r\n      \"SQL\",\r\n      \"C#\"\r\n    ],\r\n    \"Qualifications\": \"Techlabs\",\r\n    \"Salary\": 3571,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Boston\"\r\n  },\r\n  {\r\n    \"ID\": 41,\r\n    \"title\": \"Clinical Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Client Management\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Javascript\",\r\n      \"AWS\",\r\n      \"R\",\r\n      \"Javascript\",\r\n      \"AWS\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 4154,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Waltham\"\r\n  },\r\n  {\r\n    \"ID\": 42,\r\n    \"title\": \"Sr. Mgr, Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Presentation Skills\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"C++\",\r\n      \"SQL\",\r\n      \"SQL\",\r\n      \"C++\"\r\n    ],\r\n    \"Qualifications\": \"BA\",\r\n    \"Salary\": 3093,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"San Francisco\"\r\n  },\r\n  {\r\n    \"ID\": 43,\r\n    \"title\": \"Data Scientist Intern, Engineering - Software Development\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Sales\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Jupyter Notebooks\",\r\n      \"Tensorflow\",\r\n      \"C#\",\r\n      \"Jupyter Notebooks\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 4242,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Palo Alto\"\r\n  },\r\n  {\r\n    \"ID\": 44,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Client Management\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Python\",\r\n      \"SQL\",\r\n      \"C++\",\r\n      \"Python\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"MBA\",\r\n    \"Salary\": 2857,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Philadelphia\"\r\n  },\r\n  {\r\n    \"ID\": 45,\r\n    \"title\": \"Principal Data Scientist (REMOTE)\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Teaching\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C++\",\r\n      \"C++\",\r\n      \"SQL\",\r\n      \"C++\",\r\n      \"C++\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 3962,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Reston\"\r\n  },\r\n  {\r\n    \"ID\": 46,\r\n    \"title\": \"Data Scientist - Risk\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Client Management\",\r\n      \"Presentation Skills\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"Python\",\r\n      \"Javascript\",\r\n      \"Tensorflow\",\r\n      \"Python\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 2902,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"San Francisco\"\r\n  },\r\n  {\r\n    \"ID\": 47,\r\n    \"title\": \"Data Scientist I\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Mentoring\",\r\n      \"Presentation Skills\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"R\",\r\n      \"Jupyter Notebooks\",\r\n      \"AWS\",\r\n      \"R\",\r\n      \"Jupyter Notebooks\"\r\n    ],\r\n    \"Qualifications\": \"BA\",\r\n    \"Salary\": 2623,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Charlotte\"\r\n  },\r\n  {\r\n    \"ID\": 48,\r\n    \"title\": \"Level I Solutions Engineer - Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Presentation Skills\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"C#\",\r\n      \"Jupyter Notebooks\",\r\n      \"Tensorflow\",\r\n      \"C#\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 5139,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Irvine\"\r\n  },\r\n  {\r\n    \"ID\": 49,\r\n    \"title\": \"Jr Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Adaptability\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"Python\",\r\n      \"C#\",\r\n      \"SQL\",\r\n      \"Python\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 2036,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"New York\"\r\n  },\r\n  {\r\n    \"ID\": 50,\r\n    \"title\": \"Data Scientist (Face to Face)\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Adaptability\",\r\n      \"Presentation Skills\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"Javascript\",\r\n      \"Tensorflow\",\r\n      \"Tensorflow\",\r\n      \"Javascript\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 5569,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"New York\"\r\n  },\r\n  {\r\n    \"ID\": 51,\r\n    \"title\": \"Data Scientist / Machine Learning\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Sales\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"R\",\r\n      \"R\",\r\n      \"SQL\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 2649,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"New York\"\r\n  },\r\n  {\r\n    \"ID\": 52,\r\n    \"title\": \"Data Scientist Position @ South San Francisco CA (F2F interview is Mandatory)\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Mentoring\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"R\",\r\n      \"C++\",\r\n      \"SQL\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 4183,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"South San Francisco\"\r\n  },\r\n  {\r\n    \"ID\": 53,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Sales\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Python\",\r\n      \"SQL\",\r\n      \"R\",\r\n      \"Python\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 2742,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"San Francisco\"\r\n  },\r\n  {\r\n    \"ID\": 54,\r\n    \"title\": \"Data Scientist (InPerson Interview Required)\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Mentoring\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Python\",\r\n      \"Tensorflow\",\r\n      \"Tensorflow\",\r\n      \"Python\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 5757,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Jersey City\"\r\n  },\r\n  {\r\n    \"ID\": 55,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Teaching\",\r\n      \"Mentoring\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"AWS\",\r\n      \"Tensorflow\",\r\n      \"Javascript\",\r\n      \"AWS\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 4120,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Monterey\"\r\n  },\r\n  {\r\n    \"ID\": 56,\r\n    \"title\": \"Sr Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Teaching\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"R\",\r\n      \"R\",\r\n      \"Tensorflow\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 2557,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Rosemont\"\r\n  },\r\n  {\r\n    \"ID\": 57,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Teaching\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Jupyter Notebooks\",\r\n      \"SQL\",\r\n      \"C#\",\r\n      \"Jupyter Notebooks\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 2834,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Milpitas\"\r\n  },\r\n  {\r\n    \"ID\": 58,\r\n    \"title\": \"Sr. Data Analyst/Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Client Management\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"R\",\r\n      \"Tensorflow\",\r\n      \"Python\",\r\n      \"R\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 2225,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Menlo Park\"\r\n  },\r\n  {\r\n    \"ID\": 59,\r\n    \"title\": \"Data Engineer/Data Scientist (Python OR R AND SQL)\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Mentoring\",\r\n      \"Adaptability\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"R\",\r\n      \"R\",\r\n      \"R\",\r\n      \"R\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 2880,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Des Plaines\"\r\n  },\r\n  {\r\n    \"ID\": 60,\r\n    \"title\": \"Data Scientist with Atomic Reach\",\r\n    \"softSkills\": [\r\n      \"Teaching\",\r\n      \"Mentoring\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Jupyter Notebooks\",\r\n      \"C#\",\r\n      \"SQL\",\r\n      \"Jupyter Notebooks\",\r\n      \"C#\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 5117,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Foster City\"\r\n  },\r\n  {\r\n    \"ID\": 61,\r\n    \"title\": \"Sr Data scientist at San Jose, CA (No third party)\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Adaptability\",\r\n      \"Presentation Skills\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Jupyter Notebooks\",\r\n      \"AWS\",\r\n      \"AWS\",\r\n      \"Jupyter Notebooks\",\r\n      \"AWS\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 5931,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"San Jose\"\r\n  },\r\n  {\r\n    \"ID\": 62,\r\n    \"title\": \"Need Data Scientist - San Jose CA\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Adaptability\",\r\n      \"Presentation Skills\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Python\",\r\n      \"Python\",\r\n      \"R\",\r\n      \"Python\",\r\n      \"Python\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 4926,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"San Jose\"\r\n  },\r\n  {\r\n    \"ID\": 63,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Sales\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"Tensorflow\",\r\n      \"R\",\r\n      \"Tensorflow\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"Techlabs\",\r\n    \"Salary\": 5459,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Santa Clara\"\r\n  },\r\n  {\r\n    \"ID\": 64,\r\n    \"title\": \"Data Scientist Tibco Suite\",\r\n    \"softSkills\": [\r\n      \"Teaching\",\r\n      \"Mentoring\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"R\",\r\n      \"Python\",\r\n      \"R\",\r\n      \"R\",\r\n      \"Python\"\r\n    ],\r\n    \"Qualifications\": \"BA\",\r\n    \"Salary\": 4532,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"San Mateo\"\r\n  },\r\n  {\r\n    \"ID\": 65,\r\n    \"title\": \"Data Scientist(Analyst)\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Teaching\",\r\n      \"Adaptability\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Jupyter Notebooks\",\r\n      \"SQL\",\r\n      \"R\",\r\n      \"Jupyter Notebooks\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"MBA\",\r\n    \"Salary\": 3181,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Mclean\"\r\n  },\r\n  {\r\n    \"ID\": 66,\r\n    \"title\": \"Junior Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Presentation Skills\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"AWS\",\r\n      \"C++\",\r\n      \"R\",\r\n      \"AWS\",\r\n      \"C++\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 5502,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Research Triangle Park\"\r\n  },\r\n  {\r\n    \"ID\": 67,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Adaptability\",\r\n      \"Adaptability\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"Jupyter Notebooks\",\r\n      \"Tensorflow\",\r\n      \"C#\",\r\n      \"Jupyter Notebooks\"\r\n    ],\r\n    \"Qualifications\": \"Techlabs\",\r\n    \"Salary\": 3004,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Alexandria\"\r\n  },\r\n  {\r\n    \"ID\": 68,\r\n    \"title\": \"Data Scientist (New Graduate)\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Mentoring\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"R\",\r\n      \"AWS\",\r\n      \"R\",\r\n      \"R\",\r\n      \"AWS\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 5374,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Cincinnati\"\r\n  },\r\n  {\r\n    \"ID\": 69,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Adaptability\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Jupyter Notebooks\",\r\n      \"Jupyter Notebooks\",\r\n      \"Jupyter Notebooks\",\r\n      \"Jupyter Notebooks\",\r\n      \"Jupyter Notebooks\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 4938,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Chantilly\"\r\n  },\r\n  {\r\n    \"ID\": 70,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Sales\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"R\",\r\n      \"Jupyter Notebooks\",\r\n      \"Tensorflow\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"Techlabs\",\r\n    \"Salary\": 5503,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Washington\"\r\n  },\r\n  {\r\n    \"ID\": 71,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Client Management\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"R\",\r\n      \"AWS\",\r\n      \"C#\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 4048,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Rockville\"\r\n  },\r\n  {\r\n    \"ID\": 72,\r\n    \"title\": \"Sr. Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Presentation Skills\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"SQL\",\r\n      \"Tensorflow\",\r\n      \"Tensorflow\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 5936,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Los Angeles\"\r\n  },\r\n  {\r\n    \"ID\": 73,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Client Management\",\r\n      \"Adaptability\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"Tensorflow\",\r\n      \"SQL\",\r\n      \"Tensorflow\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"Techlabs\",\r\n    \"Salary\": 2402,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Charlotte\"\r\n  },\r\n  {\r\n    \"ID\": 74,\r\n    \"title\": \"Data Scientist Lead\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Adaptability\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"AWS\",\r\n      \"AWS\",\r\n      \"SQL\",\r\n      \"AWS\",\r\n      \"AWS\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 2667,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Renton\"\r\n  },\r\n  {\r\n    \"ID\": 75,\r\n    \"title\": \"Data Scientist, R, Python, ML, Deep learning\",\r\n    \"softSkills\": [\r\n      \"Teaching\",\r\n      \"Teaching\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"C++\",\r\n      \"AWS\",\r\n      \"C#\",\r\n      \"C++\"\r\n    ],\r\n    \"Qualifications\": \"MBA\",\r\n    \"Salary\": 5900,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Sunnyvale\"\r\n  },\r\n  {\r\n    \"ID\": 76,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Teaching\",\r\n      \"Adaptability\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"SQL\",\r\n      \"AWS\",\r\n      \"SQL\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 5056,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Waltham\"\r\n  },\r\n  {\r\n    \"ID\": 77,\r\n    \"title\": \"Data Scientist - Machine Learning Engineer\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Sales\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C++\",\r\n      \"Javascript\",\r\n      \"R\",\r\n      \"C++\",\r\n      \"Javascript\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 4483,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Bellevue\"\r\n  },\r\n  {\r\n    \"ID\": 78,\r\n    \"title\": \"Data Scientist II\",\r\n    \"softSkills\": [\r\n      \"Presentation Skills\",\r\n      \"Teaching\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Jupyter Notebooks\",\r\n      \"SQL\",\r\n      \"C#\",\r\n      \"Jupyter Notebooks\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"MBA\",\r\n    \"Salary\": 5051,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Los Angeles\"\r\n  },\r\n  {\r\n    \"ID\": 79,\r\n    \"title\": \"Data Modeler/Data Scientist at Houston,TX\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Client Management\",\r\n      \"Adaptability\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C++\",\r\n      \"C++\",\r\n      \"AWS\",\r\n      \"C++\",\r\n      \"C++\"\r\n    ],\r\n    \"Qualifications\": \"MBA\",\r\n    \"Salary\": 3229,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Houston\"\r\n  },\r\n  {\r\n    \"ID\": 80,\r\n    \"title\": \"Data Scientist 2019\",\r\n    \"softSkills\": [\r\n      \"Teaching\",\r\n      \"Sales\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"R\",\r\n      \"C++\",\r\n      \"Javascript\",\r\n      \"R\",\r\n      \"C++\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 5171,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Plymouth\"\r\n  },\r\n  {\r\n    \"ID\": 81,\r\n    \"title\": \"Staff Data Scientist-Houston, TX\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Adaptability\",\r\n      \"Adaptability\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"AWS\",\r\n      \"SQL\",\r\n      \"SQL\",\r\n      \"AWS\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 4812,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Houston\"\r\n  },\r\n  {\r\n    \"ID\": 82,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Teaching\",\r\n      \"Client Management\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"R\",\r\n      \"Tensorflow\",\r\n      \"C++\",\r\n      \"R\",\r\n      \"Tensorflow\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 2682,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"McLean\"\r\n  },\r\n  {\r\n    \"ID\": 83,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Presentation Skills\",\r\n      \"Presentation Skills\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Python\",\r\n      \"C++\",\r\n      \"C#\",\r\n      \"Python\",\r\n      \"C++\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 2620,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Charlotte\"\r\n  },\r\n  {\r\n    \"ID\": 84,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Presentation Skills\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"R\",\r\n      \"AWS\",\r\n      \"SQL\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"BA\",\r\n    \"Salary\": 2827,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Alexandria\"\r\n  },\r\n  {\r\n    \"ID\": 85,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Sales\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"AWS\",\r\n      \"AWS\",\r\n      \"SQL\",\r\n      \"AWS\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 2972,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"El Segundo\"\r\n  },\r\n  {\r\n    \"ID\": 86,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Mentoring\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"C#\",\r\n      \"AWS\",\r\n      \"C#\",\r\n      \"C#\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 2957,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"St. Louis\"\r\n  },\r\n  {\r\n    \"ID\": 87,\r\n    \"title\": \"Clinical Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Teaching\",\r\n      \"Adaptability\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"C#\",\r\n      \"C#\",\r\n      \"C#\",\r\n      \"C#\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 2972,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Waltham\"\r\n  },\r\n  {\r\n    \"ID\": 88,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Teaching\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"C#\",\r\n      \"C#\",\r\n      \"C#\",\r\n      \"C#\"\r\n    ],\r\n    \"Qualifications\": \"BA\",\r\n    \"Salary\": 5176,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Urbandale\"\r\n  },\r\n  {\r\n    \"ID\": 89,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Teaching\",\r\n      \"Sales\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"R\",\r\n      \"C#\",\r\n      \"Python\",\r\n      \"R\",\r\n      \"C#\"\r\n    ],\r\n    \"Qualifications\": \"Techlabs\",\r\n    \"Salary\": 2342,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Bellevue\"\r\n  },\r\n  {\r\n    \"ID\": 90,\r\n    \"title\": \"Senior Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Adaptability\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"Python\",\r\n      \"R\",\r\n      \"SQL\",\r\n      \"Python\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 3015,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"San Francisco Bay Area\"\r\n  },\r\n  {\r\n    \"ID\": 91,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Client Management\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"SQL\",\r\n      \"R\",\r\n      \"C++\",\r\n      \"SQL\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 3779,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"San Francisco\"\r\n  },\r\n  {\r\n    \"ID\": 92,\r\n    \"title\": \"Engineer II - Distributed Generation Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Adaptability\",\r\n      \"Presentation Skills\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Jupyter Notebooks\",\r\n      \"SQL\",\r\n      \"C#\",\r\n      \"Jupyter Notebooks\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"MBA\",\r\n    \"Salary\": 4640,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Golden\"\r\n  },\r\n  {\r\n    \"ID\": 93,\r\n    \"title\": \"Data Scientist Advisor\",\r\n    \"softSkills\": [\r\n      \"Sales\",\r\n      \"Adaptability\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"SQL\",\r\n      \"C#\",\r\n      \"Tensorflow\",\r\n      \"SQL\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 2279,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Memphis\"\r\n  },\r\n  {\r\n    \"ID\": 94,\r\n    \"title\": \"Data Scientist (Forecasting)\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Client Management\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"C#\",\r\n      \"Jupyter Notebooks\",\r\n      \"C#\",\r\n      \"C#\"\r\n    ],\r\n    \"Qualifications\": \"None\",\r\n    \"Salary\": 5692,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Redmond\"\r\n  },\r\n  {\r\n    \"ID\": 95,\r\n    \"title\": \"Data Scientist- Walmart International Finance Transformation\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Mentoring\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"Tensorflow\",\r\n      \"C#\",\r\n      \"R\",\r\n      \"Tensorflow\",\r\n      \"C#\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 4944,\r\n    \"Experience\": 2,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Bentonville\"\r\n  },\r\n  {\r\n    \"ID\": 96,\r\n    \"title\": \"Associate Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Adaptability\",\r\n      \"Adaptability\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"R\",\r\n      \"C#\",\r\n      \"Tensorflow\",\r\n      \"R\",\r\n      \"C#\"\r\n    ],\r\n    \"Qualifications\": \"EdX\",\r\n    \"Salary\": 2340,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Houston\"\r\n  },\r\n  {\r\n    \"ID\": 97,\r\n    \"title\": \"Machine Learning Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Client Management\",\r\n      \"Teaching\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"R\",\r\n      \"C++\",\r\n      \"C#\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 4494,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Boston\"\r\n  },\r\n  {\r\n    \"ID\": 98,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Mentoring\",\r\n      \"Client Management\",\r\n      \"Mentoring\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"R\",\r\n      \"C++\",\r\n      \"C++\",\r\n      \"R\",\r\n      \"C++\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 2043,\r\n    \"Experience\": 3,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"New York\"\r\n  },\r\n  {\r\n    \"ID\": 99,\r\n    \"title\": \"Data Scientist - Risk\",\r\n    \"softSkills\": [\r\n      \"Adaptability\",\r\n      \"Client Management\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"C#\",\r\n      \"R\",\r\n      \"C#\",\r\n      \"C#\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"BSc\",\r\n    \"Salary\": 3943,\r\n    \"Experience\": 4,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"San Francisco\"\r\n  },\r\n  {\r\n    \"ID\": 100,\r\n    \"title\": \"Data Scientist\",\r\n    \"softSkills\": [\r\n      \"Client Management\",\r\n      \"Client Management\",\r\n      \"Client Management\"\r\n    ],\r\n    \"hardSkills\": [\r\n      \"R\",\r\n      \"R\",\r\n      \"R\",\r\n      \"R\",\r\n      \"R\"\r\n    ],\r\n    \"Qualifications\": \"MSc\",\r\n    \"Salary\": 5759,\r\n    \"Experience\": 1,\r\n    \"Country\": \"USA\",\r\n    \"City\": \"Rockville\"\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/jobs",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjY1MzQ3MDQsImV4cCI6MTYyNjUzNTMwNCwic3ViIjoibWF0dGhpanNAaWsubmwiLCJpc3MiOiJNZXJpdHVkZSIsInVzZXJpZCI6MiwidXNlcnR5cGUiOiJlbXBsb3llciJ9.XKuk0-BYErjYts22dyX0mKg0Dc39Gp44srVsjKr-pS0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/profile",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Mjg5MzYwMjgsImV4cCI6MTYyODkzNjYyOCwic3ViIjoidGVzdDJAdGVzdDIubmwiLCJpc3MiOiJNZXJpdHVkZSIsInVzZXJpZCI6MiwidXNlcnR5cGUiOiJlbXBsb3llciJ9.Xg6Us0ahmXdCBu1GA4ngyLySTPmGDUVQs9w-zu96y4U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mister User\",\r\n    \"phoneNr\": \"0612345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/profile",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

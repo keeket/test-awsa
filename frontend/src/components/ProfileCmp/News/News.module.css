@@ -1,0 +1,42 @@
+.News {
+  margin-bottom: 2rem;
+}
+@media (max-width: 991px) {
+  .News {
+    margin-top: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .News > div {
+    height: 50%;
+    position: relative;
+  }
+}
+.NewsItem {
+  height: 100%;
+  position: relative;
+}
+.NewsItem > div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.NewsItem h4 {
+  font-weight: 700;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.NewsItem h4 .Text {
+}
+.NewsItem h4 .Icon {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+  /* font-size: 2.5rem; */
+}
+.ItemName {
+  opacity: 0.8;
+}

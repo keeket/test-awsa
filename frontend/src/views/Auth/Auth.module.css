@@ -1,0 +1,43 @@
+.Auth {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+.Auth .Left {
+  flex: 0 0 30%;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3rem;
+}
+.Auth .Left .Logo {
+  margin-bottom: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.Auth .Left .Content p {
+  font-size: 1.6rem;
+}
+
+.Auth .Right {
+  flex: 1;
+  padding: 0 10rem;
+  padding-top: 10rem;
+  min-height: 100%;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+  .Auth {
+    display: block;
+  }
+  .Auth .Left {
+    display: none;
+  }
+  .Auth .Right {
+    padding: 0 5rem;
+    padding-top: 3rem;
+    min-height: 100%;
+    padding-bottom: 4rem;
+  }
+}

@@ -1,0 +1,43 @@
+.Select {
+  max-width: 100%;
+}
+.Select label {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 3px;
+}
+.react-select-container {
+  /* border: none; */
+  outline: none;
+}
+.react-select-container :global(.react-select__control) {
+  background-color: #f7f7f7da;
+  border: none;
+  border-bottom: 2px solid #ddd;
+
+  padding: 0.3rem 0;
+  color: var(--text-muted-color);
+  transition: 0.2s ease-out;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary-color-shadow);
+}
+.react-select-container :global(.react-select__control):focus {
+  border-bottom-color: var(--primary-color-shadow);
+  border-bottom-color: var(--primary-color-shadow);
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 1px var(--primary-color-shadow);
+}
+.react-select-container
+  :global(.react-select__control.react-select__contro--is-focused.css-1pahdxg-control) {
+  border-bottom-color: var(--primary-color-shadow);
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 1px var(--primary-color-shadow) !important;
+}
+:global(.css-1pahdxg-control) {
+  box-shadow: 0 0 0 1px var(--primary-color-shadow) !important;
+}
+:global(.css-1pahdxg-control:hover) {
+  border-color: var(--primary-color-shadow) !important;
+}

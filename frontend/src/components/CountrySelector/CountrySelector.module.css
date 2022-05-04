@@ -1,0 +1,31 @@
+.CountrySelector {
+  display: flex;
+  flex-wrap: wrap;
+}
+.label {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.Country,
+.Region {
+  background-color: #f7f7f7da;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  padding: 1rem;
+  color: var(--text-muted-color);
+  transition: 0.2s ease-out;
+  box-shadow: 0 0 0 2px var(--primary-color-shadow);
+  border-radius: var(--border-radius);
+}
+.Country:focus,
+.Region:focus {
+  /* border-bottom-color: var(--primary-color-shadow); */
+  outline: none;
+}
+.Country {
+  flex: 0 0 70%;
+  margin-right: 1rem;
+}
+.Region {
+  flex: 0 0 26%;
+}

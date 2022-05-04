@@ -1,0 +1,52 @@
+.vacancies {
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 1rem 0;
+  }
+  &__select {
+    margin-bottom: 2.5rem;
+  }
+  // country and region
+  &__CountrySelector {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__country,
+  &__city {
+    background-color: #f7f7f7da;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem;
+    color: var(--text-muted-color);
+    transition: 0.2s ease-out;
+    box-shadow: 0 0 0 2px var(--primary-color-shadow);
+    border-radius: var(--border-radius);
+    width: 100%;
+  }
+  &__country:focus,
+  &__city:focus {
+    /* border-bottom-color: var(--primary-color-shadow); */
+    outline: none;
+  }
+  &__country {
+    flex: 0 0 70%;
+    margin-right: 1rem;
+    @media only screen and (max-width: 768px) {
+      flex: 1;
+      margin-right: 0;
+    }
+  }
+  &__city {
+    flex: 0 0 calc(30% - 1rem);
+    @media only screen and (max-width: 768px) {
+      flex: 1;
+      margin-top: 2.5rem;
+    }
+  }
+}

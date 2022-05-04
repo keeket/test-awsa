@@ -1,0 +1,86 @@
+.SideNav {
+  padding: 2rem;
+  background-color: var(--primary-color);
+  position: fixed;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: 0.2s ease-out;
+  z-index: 500;
+  top: 0;
+}
+.CloseNav {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+  width: 2rem;
+  height: 3rem;
+}
+.LogoLink {
+  display: flex;
+  justify-content: center;
+}
+.NavMenu {
+  margin-top: 4rem;
+}
+.NavMenu li a {
+  transition: 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+.NavMenu li a::after {
+  content: "\f061";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 2rem;
+  transition: 0.3s ease-out;
+  opacity: 0;
+}
+
+.NavMenu li a:hover::after,
+.NavMenu li a.Active::after {
+  opacity: 1;
+  right: 0;
+}
+.NavItemText {
+  opacity: 0.8;
+  transition: 0.3s ease-out;
+}
+.NavMenu li a:hover .NavItemText,
+.NavMenu li a.Active .NavItemText {
+  opacity: 1;
+}
+
+.NavItemIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  background-color: var(--primary-color-shadow);
+  margin-right: 1rem;
+  border-radius: 3px;
+}
+.SideNav.Show {
+  transform: translateX(0);
+}
+@media only screen and (min-width: 48em) {
+  .SideNav {
+    transform: translateX(0);
+  }
+  .CloseNav {
+    display: none;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .SideNav.Show {
+    width: 100%;
+  }
+}

@@ -1,0 +1,35 @@
+name: Deploy Frontend
+on:
+  push:
+    branches:
+      - master
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+#      - run: docker build -t keekenti/react-fib-test -f ./client/Dockerfile.test .
+#      - run: docker run -e CI=true keekenti/react-fib-test npm test
+
+      - run: docker build -t keekenti/mer-test-fe ./frontend
+      - run: docker build -t keekenti/mer-test-be ./backend
+ 
+      - run: docker push keekenti/mer-test-fe
+      - run: docker push keekenti/mer-test-be
+ 
+      - name: Generate deployment package
+        run: zip -r deploy.zip . -x '*.git*'
+ 
+#      - name: Deploy to AWS EB
+#        uses: einaregilsson/beanstalk-deploy@v18
+#        with:
+#          aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
+#          aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
+#          application_name: docker-react-fib-app
+#          environment_name: Dockerreactfibapp-env
+#          existing_bucket_name: elasticbeanstalk-us-east-1-731241204927
+#          region: us-east-1
+#          version_label: ${{ github.sha }}
+#          deployment_package: deploy.zip
