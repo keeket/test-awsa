@@ -1,23 +1,37 @@
 {
-    "AWSEBDockerrunVersion": 2
-    #"containerDefintions": [
-	#	{
-	#		"name": "mer-backend",
-	#		"image": "keekenti/mer-test-be:latest",
-	#		"hostname": "mer-backend",
-	#		"essential": false
-	#	},
-	#	{
-	#		"name": "mer-frontend",
-	#		"image": "keekenti/mer-test-fe:latest",
-	#		"essential": true,
-	#		"portMappings":[
-	#			{
-	#				"hostPort": 80,
-	#				"containerPort": 80
-	#			}
-	#		],
-	#		"links": ["mer-backend"]
-	#	}
-	#]
+    "AWSEBDockerrunVersion": 2,
+	"volumes": [
+		{
+		  "name": "mer-backend",
+		  "host": {
+			"sourcePath": "/usr/app/frontend"
+		  }
+		},
+		{
+		  "name": "mer-frontend",
+		  "host": {
+			"sourcePath": "/usr/app/backend"
+		  }
+		}
+	],
+    "containerDefintions": [
+        {
+            "name": "mer-backend",
+            "image": "keekenti/mer-test-be:latest",
+            "hostname": "mer-backend",
+            "essential": false
+        },
+        {
+            "name": "mer-frontend",
+            "image": "keekenti/mer-test-fe:latest",
+            "essential": true,
+            "portMappings":[
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": ["mer-backend"]
+        }
+    ]
 }
