@@ -5,12 +5,14 @@
             "name": "mer-backend",
             "image": "keekenti/mer-test-be:latest",
             "hostname": "mer-backend",
-            "essential": false
+            "essential": false,
+	    "memory": 128
         },
         {
             "name": "mer-frontend",
             "image": "keekenti/mer-test-fe:latest",
             "essential": true,
+	    "memory": 128,
             "portMappings":[
                 {
                     "hostPort": 80,
