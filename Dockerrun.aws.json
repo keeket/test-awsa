@@ -1,6 +1,6 @@
 {
     "AWSEBDockerrunVersion": 2,
-    "containerDefintions": [
+    "containerDefinitions": [
         {
             "name": "mer-backend",
             "image": "keekenti/mer-test-be:latest",
