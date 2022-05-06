@@ -13,7 +13,7 @@ const Auth = () => {
         </div>
         <div className={classes.Content}>
           <h2 className='display-6 mb-5'>
-            Emplement user onboarding experience with just a few click
+            Emplement user onboarding experience with just a few click - update @1531
           </h2>
           <p className='lead'>
             It is a long established fact that a reader will be distracted by
