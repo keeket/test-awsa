@@ -2,11 +2,11 @@ version: '3'
 services:
   mer-frontend:
     image: "keekenti/mer-test-fe"
-    mem_limit: 128m
+    memory: 128
     hostname: mer-frontend
     ports:
       - '80:80'
   mer-backend:
     image: "keekenti/mer-test-be"
-    mem_limit: 128m
+    memory: 128
     hostname: mer-backend
