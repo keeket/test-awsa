@@ -1,0 +1,24 @@
+version: '3'
+services:
+  mer-frontend:
+    # voorkom dat react-app direct afsluit na docker-compose up
+    stdin_open: true
+    build:
+      dockerfile: Dockerfile
+      context: ./frontend
+    volumes:
+      # negeer wijzigingen in node_modules, wel ./frontend files mappen
+      - /usr/app/frontend/node_modules
+      - ./frontend:/usr/app/frontend
+    ports:
+      - '80:80'
+    depends_on:
+      - mer-backend
+  mer-backend:
+    build:
+      dockerfile: Dockerfile
+      context: ./backend
+    volumes:
+      - ./backend:/usr/app/backend
+    ports:
+      - '8180:8080'

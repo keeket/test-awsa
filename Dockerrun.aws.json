@@ -1,0 +1,23 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefintions": [
+        {
+            "name": "mer-backend",
+            "image": "keekenti/mer-test-be",
+            "hostname": "mer-backend",
+            "essential": false
+        },
+        {
+            "name": "mer-frontend",
+            "image": "keekenti/mer-test-fe",
+            "essential": true,
+            "portMappings":[
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": ["mer-backend"]
+        }
+    ]
+}
