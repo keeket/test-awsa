@@ -6,7 +6,7 @@
             "image": "keekenti/mer-test-be:latest",
             "hostname": "mer-backend",
             "essential": false,
-	    "memory": 1024
+	    "memory": 128
         },
         {
             "name": "mer-frontend",
