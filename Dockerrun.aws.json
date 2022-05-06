@@ -1,19 +1,5 @@
 {
     "AWSEBDockerrunVersion": 2,
-	#"volumes": [
-	#	{
-	#	  "name": "mer-backend",
-	#	  "host": {
-	#		"sourcePath": "/usr/app/frontend"
-	#	  }
-	#	},
-	#	{
-	#	  "name": "mer-frontend",
-	#	  "host": {
-	#		"sourcePath": "/usr/app/backend"
-	#	  }
-	#	}
-	#],
     "containerDefintions": [
         {
             "name": "mer-backend",
