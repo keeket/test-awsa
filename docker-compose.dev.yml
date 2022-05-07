@@ -18,7 +18,5 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./backend
-    volumes:
-      - ./backend:/usr/app/backend
     ports:
       - '8180:8080'
